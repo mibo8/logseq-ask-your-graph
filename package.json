@@ -1,0 +1,41 @@
+{
+  "name": "logseq-ask-your-graph",
+  "version": "0.1.0",
+  "description": "A Logseq plugin that allows chatting as a sequence of blocks",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "watch": "vite build --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "logseq",
+    "plugin",
+    "chat"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "logseq": {
+    "id": "logseq-ask-your-graph",
+    "icon": "icon.svg"
+  },
+  "dependencies": {
+    "@logseq/libs": "^0.0.17"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-logseq": "^1.1.0",
+    "langchain": "^0.3.19",
+    "@langchain/ollama": "^0.2.0",
+    "@langchain/community": "^0.3.40",
+    "eslint": "^8.38.0",
+    "@eslint/js": "^8.38.0",
+    "typescript-eslint": "8.29.1",
+    "prettier": "^3.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0"
+  }
+}
