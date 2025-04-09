@@ -41,7 +41,6 @@ export class VectorIndex {
 
   public async init() {
     if (logseq.settings?.vectorStoreUuid) {
-      
       this.vectorStore = await CloseVectorWeb.loadFromCloud({
         uuid: String(logseq.settings!.vectorStoreUuid),
         embeddings: this.embeddings,
@@ -213,15 +212,15 @@ export class VectorIndex {
           await vectorStore.addDocuments(batch)
         }
       }
-      
+
       let uuidFromSettings: string | undefined
       if (
-        logseq.settings?.vectorStoreUuid && 
+        logseq.settings?.vectorStoreUuid &&
         String(logseq.settings.vectorStoreUuid) !== ""
       ) {
         uuidFromSettings = String(logseq.settings.vectorStoreUuid)
       }
-      
+
       this.vectorStore = vectorStore
 
       await this.vectorStore!.saveToCloud({
